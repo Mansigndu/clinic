@@ -94,9 +94,6 @@
         </div>
     </div>
 </nav>
-
-<!-- Hero Section -->
-<!-- Hero Section -->
 <!-- Hero Section -->
 <section id="home" class="pt-10 md:pt-10 lg:pt-15">
   <div class="relative overflow-hidden min-h-[85vh] flex items-center">
@@ -668,6 +665,15 @@ Dr.Shailaja Sabnis is a highly experienced consultant rheumatologist and physici
     menuBtn.addEventListener('click', () => {
         mobileMenu.classList.toggle('hidden');
     });
+
+  
+
+  // Close mobile menu on scroll
+  window.addEventListener('scroll', () => {
+    if (!mobileMenu.classList.contains('hidden')) {
+      mobileMenu.classList.add('hidden');
+    }
+  });
 
     // Close mobile menu when clicking a link
     document.querySelectorAll('#mobile-menu a').forEach(link => {
