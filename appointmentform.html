@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Appointment Form - Dr. Shailaja Sabnis</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    /* Custom colors for consistency */
+    :root {
+      --primary: #1E3A8A;   /* Dark Blue */
+      --secondary: #3B82F6; /* Sky Blue */
+      --accent: #10B981;    /* Teal/Green */
+    }
+  </style>
+</head>
+<body class="bg-gray-100 flex justify-center">
+
+  <!-- Main Container -->
+  <div class="w-full max-w-2xl p-6 md:p-10 bg-white rounded-3xl shadow-xl mt-10 mb-10">
+
+    <!-- Doctor Image -->
+    <div class="flex justify-center mb-6">
+      <img src="./images/Dr Shailaja Sabnis.jpg" 
+           alt="Doctor Image" class="rounded-full w-36 h-36 object-cover border-4 border-[var(--primary)]">
+    </div>
+
+    <!-- Doctor Name -->
+    <h1 class="text-center text-3xl md:text-4xl font-bold text-[var(--primary)] mb-2">Dr. Shailaja Sabnis</h1>
+    <p class="text-center text-gray-600 mb-8 text-lg">Book Your Appointment</p>
+
+    <!-- Appointment Form -->
+    <form id="appointmentForm" class="space-y-6">
+
+      <!-- Full Name -->
+      <div>
+        <label for="name" class="block text-gray-700 font-medium mb-1">Full Name <span class="text-red-500">*</span></label>
+        <input type="text" id="name" placeholder="Enter your full name" required
+          class="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[var(--secondary)]">
+      </div>
+
+      <!-- Email -->
+      <div>
+        <label for="email" class="block text-gray-700 font-medium mb-1">Email <span class="text-red-500">*</span></label>
+        <input type="email" id="email" placeholder="Enter your email" required
+          class="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[var(--secondary)]">
+      </div>
+
+      <!-- Mobile -->
+      <div>
+        <label for="mobile" class="block text-gray-700 font-medium mb-1">Mobile <span class="text-red-500">*</span></label>
+        <input type="tel" id="mobile" placeholder="Enter your mobile number" required
+          class="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[var(--secondary)]">
+      </div>
+
+      <!-- Preferred Date -->
+      <div>
+        <label for="date" class="block text-gray-700 font-medium mb-1">Preferred Date</label>
+        <input type="date" id="date" class="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[var(--secondary)]">
+      </div>
+
+      <!-- Location & Time -->
+      <div>
+        <label class="block text-gray-700 font-medium mb-2">Preferred Location & Time <span class="text-red-500">*</span></label>
+        <div class="space-y-2">
+          <label class="flex items-start cursor-pointer">
+            <input type="radio" name="location" value="Sneh Nursing Home" class="mt-1 mr-3 h-5 w-5 text-[var(--accent)]" required>
+            <span class="text-gray-700 leading-tight">Sneh Nursing Home, Andheri East (11AM – 2PM)</span>
+          </label>
+          <label class="flex items-start cursor-pointer">
+            <input type="radio" name="location" value="Nanavati Hospital" class="mt-1 mr-3 h-5 w-5 text-[var(--accent)]">
+            <span class="text-gray-700 leading-tight">Nanavati Hospital (Mon, Wed, Sat 3PM – 5PM)</span>
+          </label>
+          <label class="flex items-start cursor-pointer">
+            <input type="radio" name="location" value="Medico Surgical Clinic" class="mt-1 mr-3 h-5 w-5 text-[var(--accent)]">
+            <span class="text-gray-700 leading-tight">Medico Surgical Clinic, Andheri East (7PM – 9PM)</span>
+          </label>
+        </div>
+      </div>
+
+      <!-- CAPTCHA -->
+      <div class="flex items-center space-x-2">
+        <input type="checkbox" id="captcha" class="w-6 h-6 border-gray-300 rounded">
+        <label for="captcha" class="text-gray-700">I am not a robot</label>
+      </div>
+
+      <!-- Buttons -->
+      <div class="flex flex-col md:flex-row justify-between gap-4 mt-4">
+        <button type="submit" class="bg-[var(--primary)] hover:bg-[var(--secondary)] text-white font-semibold py-3 px-6 rounded-lg shadow transition">
+          Submit
+        </button>
+        <button type="reset" class="bg-gray-300 hover:bg-gray-400 text-gray-800 font-semibold py-3 px-6 rounded-lg shadow transition">
+          Reset
+        </button>
+      </div>
+
+    </form>
+  </div>
+
+  <script>
+    const form = document.getElementById('appointmentForm');
+    form.addEventListener('submit', function(e) {
+      e.preventDefault();
+      const captcha = document.getElementById('captcha');
+      if (!captcha.checked) {
+        alert('Please verify you are not a robot.');
+        return;
+      }
+      alert('Appointment request submitted successfully!');
+      form.reset();
+    });
+  </script>
+
+</body>
+</html>
