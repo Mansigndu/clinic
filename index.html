@@ -14,6 +14,18 @@
         rel="stylesheet">
     <!-- AOS (Animate On Scroll) Library -->
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.2.0/fonts/remixicon.css" rel="stylesheet">
+<link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
+<script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+<link href="https://cdn.jsdelivr.net/npm/remixicon@4.2.0/fonts/remixicon.css" rel="stylesheet">
+
+<link
+  rel="stylesheet"
+  href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+/>
+
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 
     <style>
         * {
@@ -64,6 +76,15 @@
             font-weight: 700;
             color: #4f46e5;
         }
+        
+
+@keyframes zoomHero{
+0%{transform:scale(1);}
+50%{transform:scale(1.1);}
+100%{transform:scale(1);}
+}
+
+
     </style>
 </head>
 
@@ -78,7 +99,7 @@
                 <!-- Logo -->
                 <div class="flex items-center space-x-3">
                     <a href="#home">
-                        <img src="images/cliniclogoo.png" alt="Dr. Shailaja Sabnis" class="h-10 lg:h-20 w-auto">
+                        <img src="images/cliniclogoo.jpg" alt="Dr. Shailaja Sabnis" class="h-10 lg:h-20 w-auto">
                     </a>
                 </div>
 
@@ -115,54 +136,76 @@
         </div>
     </nav>
     <!-- Hero Section -->
-    <section id="home" class="pt-10 md:pt-10 lg:pt-15">
-        <div class="relative overflow-hidden min-h-[85vh] flex items-center">
+   <section id="home" class="relative pt-16">
 
-            <!-- Background Image -->
-            <div class="absolute inset-0">
-                <img src="https://images.unsplash.com/photo-1576091160550-2173dba999ef?auto=format&fit=crop&w=1950&q=80"
-                    alt="Doctor consultation" class="w-full h-full object-cover">
+<div class="relative min-h-[90vh] flex items-center overflow-hidden">
 
-                <!-- Gradient Overlay -->
-                <div class="absolute inset-0 bg-gradient-to-r from-teal-900/80 via-teal-800/70 to-black/60"></div>
-            </div>
+<!-- Background -->
+<div class="absolute inset-0">
 
-            <!-- Hero Content -->
-            <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center text-white">
+<img
+src="https://images.unsplash.com/photo-1576091160550-2173dba999ef?auto=format&fit=crop&w=1950&q=80"
+alt="Doctor consultation"
+class="w-full h-full object-cover scale-105 animate-[zoomHero_20s_linear_infinite]">
 
-                <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 leading-tight">
-                    Dr. Shailaja Sabnis
-                </h1>
+<div class="absolute inset-0 bg-gradient-to-r from-teal-900/85 via-teal-800/70 to-black/70"></div>
 
-                <p class="text-xl md:text-2xl lg:text-3xl mb-6 text-teal-200">
-                    Expert Rheumatology Care in Mumbai
-                </p>
+</div>
 
-                <p class="text-lg md:text-xl mb-10 max-w-3xl mx-auto text-gray-200">
-                    Providing compassionate and advanced treatment for arthritis, autoimmune diseases, and joint
-                    disorders with over 25+ years of medical excellence.
-                </p>
 
-                <!-- Buttons -->
-                <div class="flex justify-center gap-4 flex-wrap">
+<!-- Content -->
+<div class="relative max-w-6xl mx-auto px-5 text-center text-white">
 
-                    <a href="appointmentform.html"
-                        class="bg-teal-600 px-8 py-4 rounded-full text-lg font-semibold hover:bg-teal-700 transition transform hover:scale-105 shadow-lg">
-                        <i class="fas fa-calendar-check mr-2"></i>
-                        Book Appointment
-                    </a>
+<div data-aos="fade-up"
+class="backdrop-blur-lg bg-white/10 border border-white/20 rounded-3xl p-8 md:p-12 shadow-2xl">
 
-                    <a href="#services"
-                        class="border border-white px-8 py-4 rounded-full text-lg font-semibold hover:bg-white hover:text-teal-900 transition">
-                        Our Services
-                    </a>
+<h1 class="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mb-4">
+Dr. Shailaja Sabnis
+</h1>
 
-                </div>
+<p class="text-lg md:text-2xl text-teal-200 mb-4 font-medium">
+Expert Rheumatology Care in Mumbai
+</p>
 
-            </div>
+<p class="text-base md:text-lg max-w-2xl mx-auto text-gray-200 mb-8">
+Providing compassionate and advanced treatment for arthritis, autoimmune diseases,
+and joint disorders with over <span class="text-teal-300 font-semibold">30+ years of medical excellence.</span>
+</p>
 
-        </div>
-    </section>
+
+<!-- Buttons -->
+<div class="flex flex-col sm:flex-row justify-center gap-4 mb-10">
+
+<a href="appointmentform.html"
+class="bg-teal-600 px-8 py-4 rounded-full text-lg font-semibold shadow-lg hover:bg-teal-700 hover:scale-105 transition">
+
+<i class="fas fa-calendar-check mr-2"></i>
+Book Appointment
+
+</a>
+
+<a href="#services"
+class="border border-white px-8 py-4 rounded-full text-lg font-semibold hover:bg-white hover:text-teal-900 transition">
+
+Our Services
+
+</a>
+
+</div>
+
+
+
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+
+
 
     <!-- Trust Badges -->
     <section class="py-20 bg-gray-50">
@@ -228,7 +271,7 @@
 
                 <!-- Doctor Image -->
                 <div data-aos="fade-right">
-                    <img src="./images/Dr Shailaja Sabnis.jpg" alt="Doctor consulting patient"
+                    <img src="./images/doctor.jpg" alt="Doctor consulting patient"
                         class="rounded-2xl shadow-2xl hover:scale-105 transition duration-500">
                 </div>
 
@@ -351,12 +394,12 @@ Practicing at Sneh Nursing Home and affiliated with Lilavati & Nanavati Max, she
                 </div>
 
                 <!-- Card -->
-                <div class="bg-white p-8 rounded-xl shadow-sm border hover:shadow-lg transition duration-300 text-center"
-                    data-aos="fade-up">
+                <div class="bg-white p-6 rounded-2xl shadow-md  border-t-4 border-teal-600 hover:shadow-xl transition duration-300  hover:-translate-y-2 "
+                    data-aos="zoom-in" data-aos-delay="500">
 
-                    <i class="fas fa-heart text-5xl text-teal-600 mb-6"></i>
+                    <i class="fas fa-heart text-3xl text-teal-600 mb-4"></i>
 
-                    <h3 class="text-xl font-semibold text-gray-800 mb-3">
+                    <h3 class="text-xl font-semibold text-gray-800 mb-2">
                         Pregnancy Precautions for Rheumatic Diseases
                     </h3>
 
@@ -368,8 +411,7 @@ Practicing at Sneh Nursing Home and affiliated with Lilavati & Nanavati Max, she
 
 
                 <!-- Card -->
-                <div class="bg-white p-8 rounded-xl shadow-sm border hover:shadow-lg transition duration-300 text-center"
-                    data-aos="fade-up" data-aos-delay="100">
+                <div class="bg-white p-6 rounded-2xl shadow-md  border-t-4 border-teal-600 hover:shadow-xl transition duration-300  hover:-translate-y-2" data-aos="zoom-in" data-aos-delay="500">
 
                     <i class="fas fa-user text-5xl text-teal-600 mb-6"></i>
 
@@ -385,8 +427,8 @@ Practicing at Sneh Nursing Home and affiliated with Lilavati & Nanavati Max, she
 
 
                 <!-- Card -->
-                <div class="bg-white p-8 rounded-xl shadow-sm border hover:shadow-lg transition duration-300 text-center"
-                    data-aos="fade-up" data-aos-delay="200">
+                <div class="bg-white p-6 rounded-2xl shadow-md  border-t-4 border-teal-600 hover:shadow-xl transition duration-300  hover:-translate-y-2" 
+                data-aos="zoom-in" data-aos-delay="500">
 
                     <i class="fas fa-capsules text-5xl text-teal-600 mb-6"></i>
 
@@ -402,8 +444,8 @@ Practicing at Sneh Nursing Home and affiliated with Lilavati & Nanavati Max, she
 
 
                 <!-- Card -->
-                <div class="bg-white p-8 rounded-xl shadow-sm border hover:shadow-lg transition duration-300 text-center"
-                    data-aos="fade-up" data-aos-delay="300">
+                <div class="bg-white p-6 rounded-2xl shadow-md  border-t-4 border-teal-600 hover:shadow-xl transition duration-300  hover:-translate-y-2"
+                 data-aos="zoom-in" data-aos-delay="500">
 
                     <i class="fas fa-notes-medical text-5xl text-teal-600 mb-6"></i>
 
@@ -419,8 +461,8 @@ Practicing at Sneh Nursing Home and affiliated with Lilavati & Nanavati Max, she
 
 
                 <!-- Card -->
-                <div class="bg-white p-8 rounded-xl shadow-sm border hover:shadow-lg transition duration-300 text-center"
-                    data-aos="fade-up" data-aos-delay="400">
+                <div class="bg-white p-6 rounded-2xl shadow-md  border-t-4 border-teal-600 hover:shadow-xl transition duration-300  hover:-translate-y-2"
+                 data-aos="zoom-in" data-aos-delay="500">
 
                     <i class="fas fa-pills text-5xl text-teal-600 mb-6"></i>
 
@@ -436,9 +478,8 @@ Practicing at Sneh Nursing Home and affiliated with Lilavati & Nanavati Max, she
 
 
                 <!-- Card -->
-                <div class="bg-white p-8 rounded-xl shadow-sm border hover:shadow-lg transition duration-300 text-center"
-                    data-aos="fade-up" data-aos-delay="500">
-
+                <div class="bg-white p-6 rounded-2xl shadow-md  border-t-4 border-teal-600 hover:shadow-xl transition duration-300  hover:-translate-y-2"
+                 data-aos="zoom-in" data-aos-delay="500">
                     <i class="fas fa-heartbeat text-5xl text-teal-600 mb-6"></i>
 
                     <h3 class="text-xl font-semibold text-gray-800 mb-3">
@@ -460,187 +501,172 @@ Practicing at Sneh Nursing Home and affiliated with Lilavati & Nanavati Max, she
     </section>
     <!-- Testimonials -->
     <section class="w-full bg-white py-16 md:py-24 px-4 md:px-8">
-        <div class="max-w-7xl mx-auto">
-            <!-- section header -->
-            <div class="text-center mb-12 md:mb-16">
 
-                <h2 class="text-3xl md:text-4xl lg:text-5xl font-bold text-[#1e3a3a] mt-2">What Our <span
-                        class="text-[#2A9D8F]">Patients Say</span></h2>
-                <p class="text-[#2c4a48] text-base md:text-lg mt-4 max-w-2xl mx-auto">Real experiences from individuals
-                    who entrusted us with their health journey.</p>
-            </div>
+<div class="max-w-7xl mx-auto">
 
+<!-- Section Header -->
+<div class="text-center mb-14">
+<h2 class="text-3xl md:text-4xl lg:text-5xl font-bold text-[#1e3a3a]">
+What Our <span class="text-[#2A9D8F]">Patients Say</span>
+</h2>
 
-            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
-
-                <!-- testimonial card 1 ( -->
-                <div
-                    class="group bg-[#F8FAFC] p-6 md:p-8 rounded-3xl shadow-lg border border-gray-100 flex flex-col items-start transition-all duration-300 hover:-translate-y-2 hover:shadow-2xl hover:border-[#2A9D8F]/30 hover:bg-white cursor-default">
-                    <div
-                        class="flex items-center gap-1 text-yellow-400 mb-4 transition-transform duration-300 group-hover:scale-105">
-                        <i class="ri-star-fill"></i><i class="ri-star-fill"></i><i class="ri-star-fill"></i><i
-                            class="ri-star-fill"></i><i class="ri-star-fill"></i>
-                        <span class="text-gray-500 text-sm ml-2">5.0</span>
-                    </div>
-                    <p
-                        class="text-[#1e3a3a] text-base md:text-lg leading-relaxed mb-6 transition-colors duration-300 group-hover:text-[#1e3a3a]/90">
-                        “Dr. Nayyar is an exceptionally skilled physician. I was completely satisfied with his treatment
-                        approach and the excellent results. His treatment skills are truly top-notch, and I felt
-                        confident and well-cared for throughout the entire process. He took the time to explain
-                        everything clearly and was very attentive to my needs.”</p>
-                    <div class="flex items-center gap-4 mt-auto transition-all duration-300 group-hover:translate-x-1">
-                        <div
-                            class="w-12 h-12 bg-[#2A9D8F]/20 rounded-full flex items-center justify-center text-[#2A9D8F] text-xl font-bold transition-all duration-300 group-hover:bg-[#2A9D8F] group-hover:text-white group-hover:scale-110">
-                            P</div>
-                        <div>
-                            <h4
-                                class="font-semibold text-[#1e3a3a] transition-colors duration-300 group-hover:text-[#2A9D8F]">
-                                Pankaj Yadav</h4>
-
-                        </div>
-                    </div>
-                </div>
-
-                <!-- testimonial card 2  -->
-                <div
-                    class="group bg-[#F8FAFC] p-6 md:p-8 rounded-3xl shadow-lg border border-gray-100 flex flex-col items-start transition-all duration-300 hover:-translate-y-2 hover:shadow-2xl hover:border-[#2A9D8F]/30 hover:bg-white cursor-default">
-                    <div
-                        class="flex items-center gap-1 text-yellow-400 mb-4 transition-transform duration-300 group-hover:scale-105">
-                        <i class="ri-star-fill"></i><i class="ri-star-fill"></i><i class="ri-star-fill"></i><i
-                            class="ri-star-fill"></i><i class="ri-star-fill"></i>
-                        <span class="text-gray-500 text-sm ml-2">5.0</span>
-                    </div>
-                    <p
-                        class="text-[#1e3a3a] text-base md:text-lg leading-relaxed mb-6 transition-colors duration-300 group-hover:text-[#1e3a3a]/90">
-                        “I came to VeCare with uncontrolled blood sugar levels. Dr. Nayyar’s holistic diabetes
-                        management plan, including diet counseling, has been life‑changing. Forever grateful.”</p>
-                    <div class="flex items-center gap-4 mt-auto transition-all duration-300 group-hover:translate-x-1">
-                        <div
-                            class="w-12 h-12 bg-[#2A9D8F]/20 rounded-full flex items-center justify-center text-[#2A9D8F] text-xl font-bold transition-all duration-300 group-hover:bg-[#2A9D8F] group-hover:text-white group-hover:scale-110">
-                            A</div>
-                        <div>
-                            <h4
-                                class="font-semibold text-[#1e3a3a] transition-colors duration-300 group-hover:text-[#2A9D8F]">
-                                Arun Khanna</h4>
-
-                        </div>
-                    </div>
-                </div>
+<p class="text-[#2c4a48] text-base md:text-lg mt-4 max-w-2xl mx-auto">
+Real experiences from individuals who entrusted us with their health journey.
+</p>
+</div>
 
 
-                <!-- testimonial card 3  -->
-                <div
-                    class="group bg-[#F8FAFC] p-6 md:p-8 rounded-3xl shadow-lg border border-gray-100 flex flex-col items-start transition-all duration-300 hover:-translate-y-2 hover:shadow-2xl hover:border-[#2A9D8F]/30 hover:bg-white cursor-default">
-                    <div
-                        class="flex items-center gap-1 text-yellow-400 mb-4 transition-transform duration-300 group-hover:scale-105">
-                        <i class="ri-star-fill"></i><i class="ri-star-fill"></i><i class="ri-star-fill"></i><i
-                            class="ri-star-fill"></i><i class="ri-star-fill"></i>
-                        <span class="text-gray-500 text-sm ml-2">5.0</span>
-                    </div>
-                    <p
-                        class="text-[#1e3a3a] text-base md:text-lg leading-relaxed mb-6 transition-colors duration-300 group-hover:text-[#1e3a3a]/90">
-                        “The staff and facilities at VE CARE HOSPITAL were also outstanding, providing a clean,
-                        professional, and supportive environment. I highly recommend both Dr. Rakesh Nayyar for his
-                        expertise and compassionate care, and VE CARE HOSPITAL for their excellent services.”</p>
-                    <div class="flex items-center gap-4 mt-auto transition-all duration-300 group-hover:translate-x-1">
-                        <div
-                            class="w-12 h-12 bg-[#2A9D8F]/20 rounded-full flex items-center justify-center text-[#2A9D8F] text-xl font-bold transition-all duration-300 group-hover:bg-[#2A9D8F] group-hover:text-white group-hover:scale-110">
-                            S</div>
-                        <div>
-                            <h4
-                                class="font-semibold text-[#1e3a3a] transition-colors duration-300 group-hover:text-[#2A9D8F]">
-                                Satish Thakar</h4>
+<!-- Testimonials Grid -->
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
 
-                        </div>
-                    </div>
-                </div>
+<!-- CARD 1 -->
+<div data-aos="fade-up"
+class="group bg-[#F8FAFC] p-8 rounded-3xl shadow-lg border border-gray-100 flex flex-col h-full transition-all duration-500 hover:-translate-y-3 hover:shadow-2xl">
 
+<div class="flex items-center gap-1 text-yellow-400 mb-4">
+<i class="ri-star-fill"></i><i class="ri-star-fill"></i><i class="ri-star-fill"></i><i class="ri-star-fill"></i><i class="ri-star-fill"></i>
+<span class="text-gray-500 text-sm ml-2">5.0</span>
+</div>
 
-                <!-- testimonial card 4  -->
-                <div
-                    class="group bg-[#F8FAFC] p-6 md:p-8 rounded-3xl shadow-lg border border-gray-100 flex flex-col items-start transition-all duration-300 hover:-translate-y-2 hover:shadow-2xl hover:border-[#2A9D8F]/30 hover:bg-white cursor-default">
-                    <div
-                        class="flex items-center gap-1 text-yellow-400 mb-4 transition-transform duration-300 group-hover:scale-105">
-                        <i class="ri-star-fill"></i><i class="ri-star-fill"></i><i class="ri-star-fill"></i><i
-                            class="ri-star-fill"></i><i class="ri-star-fill"></i>
-                        <span class="text-gray-500 text-sm ml-2">5.0</span>
-                    </div>
-                    <p
-                        class="text-[#1e3a3a] text-base md:text-lg leading-relaxed mb-6 transition-colors duration-300 group-hover:text-[#1e3a3a]/90">
-                        “"You are incredibly knowledgeable and skilled; I felt confident in your care."”</p>
-                    <div class="flex items-center gap-4 mt-auto transition-all duration-300 group-hover:translate-x-1">
-                        <div
-                            class="w-12 h-12 bg-[#2A9D8F]/20 rounded-full flex items-center justify-center text-[#2A9D8F] text-xl font-bold transition-all duration-300 group-hover:bg-[#2A9D8F] group-hover:text-white group-hover:scale-110">
-                            N</div>
-                        <div>
-                            <h4
-                                class="font-semibold text-[#1e3a3a] transition-colors duration-300 group-hover:text-[#2A9D8F]">
-                                Neeraj Tiwari</h4>
+<p class="text-[#1e3a3a] text-sm md:text-base leading-relaxed mb-6">
+“Dr. Shahla Ijas Sabnis provided excellent treatment for my infection. Her clear guidance and effective medication helped me recover quickly. Highly recommended.”
+</p>
 
-                        </div>
-                    </div>
-                </div>
+<div class="flex items-center gap-4 mt-auto">
+<div class="w-12 h-12 bg-[#2A9D8F]/20 rounded-full flex items-center justify-center text-[#2A9D8F] font-bold">S</div>
+<div>
+<h4 class="font-semibold text-[#1e3a3a]">Swadha Sharma</h4>
+<p class="text-sm text-gray-500">Verified Patient</p>
+</div>
+</div>
+
+</div>
 
 
-                <!--  testimonial card 5 -->
-                <div
-                    class="group bg-[#F8FAFC] p-6 md:p-8 rounded-3xl shadow-lg border border-gray-100 flex flex-col items-start transition-all duration-300 hover:-translate-y-2 hover:shadow-2xl hover:border-[#2A9D8F]/30 hover:bg-white cursor-default">
-                    <div
-                        class="flex items-center gap-1 text-yellow-400 mb-4 transition-transform duration-300 group-hover:scale-105">
-                        <i class="ri-star-fill"></i><i class="ri-star-fill"></i><i class="ri-star-fill"></i><i
-                            class="ri-star-fill"></i><i class="ri-star-fill"></i>
-                        <span class="text-gray-500 text-sm ml-2">5.0</span>
-                    </div>
-                    <p
-                        class="text-[#1e3a3a] text-base md:text-lg leading-relaxed mb-6 transition-colors duration-300 group-hover:text-[#1e3a3a]/90">
-                        “Very cooperative staff,their service was quick and uninterrupted, good experience in all
-                        aspects.”</p>
-                    <div class="flex items-center gap-4 mt-auto transition-all duration-300 group-hover:translate-x-1">
-                        <div
-                            class="w-12 h-12 bg-[#2A9D8F]/20 rounded-full flex items-center justify-center text-[#2A9D8F] text-xl font-bold transition-all duration-300 group-hover:bg-[#2A9D8F] group-hover:text-white group-hover:scale-110">
-                            Z</div>
-                        <div>
-                            <h4
-                                class="font-semibold text-[#1e3a3a] transition-colors duration-300 group-hover:text-[#2A9D8F]">
-                                Zubeda Ashraf</h4>
+<!-- CARD 2 -->
+<div data-aos="fade-up" data-aos-delay="100"
+class="group bg-[#F8FAFC] p-8 rounded-3xl shadow-lg border border-gray-100 flex flex-col h-full transition-all duration-500 hover:-translate-y-3 hover:shadow-2xl">
 
-                        </div>
-                    </div>
-                </div>
+<div class="flex items-center gap-1 text-yellow-400 mb-4">
+<i class="ri-star-fill"></i><i class="ri-star-fill"></i><i class="ri-star-fill"></i><i class="ri-star-fill"></i><i class="ri-star-fill"></i>
+<span class="text-gray-500 text-sm ml-2">5.0</span>
+</div>
+
+<p class="text-[#1e3a3a] text-sm md:text-base leading-relaxed mb-6">
+“Dr. Shailaja Sabnis treated my severe ankle pain caused by arthritis with great care and expertise. Her treatment helped me recover and return to my daily activities comfortably.”
+</p>
+
+<div class="flex items-center gap-4 mt-auto">
+<div class="w-12 h-12 bg-[#2A9D8F]/20 rounded-full flex items-center justify-center text-[#2A9D8F] font-bold">R</div>
+<div>
+<h4 class="font-semibold text-[#1e3a3a]">Raveendra K Wagh</h4>
+<p class="text-sm text-gray-500">Verified Patient</p>
+</div>
+</div>
+
+</div>
 
 
-                <!-- testimonial card 6  -->
-                <div
-                    class="group bg-[#F8FAFC] p-6 md:p-8 rounded-3xl shadow-lg border border-gray-100 flex flex-col items-start transition-all duration-300 hover:-translate-y-2 hover:shadow-2xl hover:border-[#2A9D8F]/30 hover:bg-white cursor-default">
-                    <div
-                        class="flex items-center gap-1 text-yellow-400 mb-4 transition-transform duration-300 group-hover:scale-105">
-                        <i class="ri-star-fill"></i><i class="ri-star-fill"></i><i class="ri-star-fill"></i><i
-                            class="ri-star-fill"></i><i class="ri-star-half-fill"></i>
-                        <span class="text-gray-500 text-sm ml-2">4.9</span>
-                    </div>
-                    <p
-                        class="text-[#1e3a3a] text-base md:text-lg leading-relaxed mb-6 transition-colors duration-300 group-hover:text-[#1e3a3a]/90">
-                        “The preventive cardiology program at VeCare is excellent. Regular check‑ups and Dr. Nayyar’s
-                        advice on lifestyle changes have kept my heart healthy. Highly recommended for anyone with a
-                        family history.”</p>
-                    <div class="flex items-center gap-4 mt-auto transition-all duration-300 group-hover:translate-x-1">
-                        <div
-                            class="w-12 h-12 bg-[#2A9D8F]/20 rounded-full flex items-center justify-center text-[#2A9D8F] text-xl font-bold transition-all duration-300 group-hover:bg-[#2A9D8F] group-hover:text-white group-hover:scale-110">
-                            M</div>
-                        <div>
-                            <h4
-                                class="font-semibold text-[#1e3a3a] transition-colors duration-300 group-hover:text-[#2A9D8F]">
-                                Meera Desai</h4>
+<!-- CARD 3 -->
+<div data-aos="fade-up" data-aos-delay="200"
+class="group bg-[#F8FAFC] p-8 rounded-3xl shadow-lg border border-gray-100 flex flex-col h-full transition-all duration-500 hover:-translate-y-3 hover:shadow-2xl">
 
-                        </div>
-                    </div>
-                </div>
+<div class="flex items-center gap-1 text-yellow-400 mb-4">
+<i class="ri-star-fill"></i><i class="ri-star-fill"></i><i class="ri-star-fill"></i><i class="ri-star-fill"></i><i class="ri-star-fill"></i>
+<span class="text-gray-500 text-sm ml-2">5.0</span>
+</div>
 
-            </div>
+<p class="text-[#1e3a3a] text-sm md:text-base leading-relaxed mb-6">
+“Dr. Shailaja Sabnis is a very kind and attentive doctor. She explains health issues clearly and treats patients with great care. Her compassionate nature makes patients feel comfortable.”
+</p>
+
+<div class="flex items-center gap-4 mt-auto">
+<div class="w-12 h-12 bg-[#2A9D8F]/20 rounded-full flex items-center justify-center text-[#2A9D8F] font-bold">A</div>
+<div>
+<h4 class="font-semibold text-[#1e3a3a]">Amy Bhamgara</h4>
+<p class="text-sm text-gray-500">Verified Patient</p>
+</div>
+</div>
+
+</div>
 
 
-        </div>
-    </section>
+<!-- CARD 4 -->
+<div data-aos="fade-up"
+class="group bg-[#F8FAFC] p-8 rounded-3xl shadow-lg border border-gray-100 flex flex-col h-full transition-all duration-500 hover:-translate-y-3 hover:shadow-2xl">
+
+<div class="flex items-center gap-1 text-yellow-400 mb-4">
+<i class="ri-star-fill"></i><i class="ri-star-fill"></i><i class="ri-star-fill"></i><i class="ri-star-fill"></i><i class="ri-star-fill"></i>
+<span class="text-gray-500 text-sm ml-2">5.0</span>
+</div>
+
+<p class="text-[#1e3a3a] text-sm md:text-base leading-relaxed mb-6">
+“Dr. Shailaja Sabnis provided excellent care during my rheumatism treatment. She responded positively, gave valuable advice, and explained everything clearly.”
+</p>
+
+<div class="flex items-center gap-4 mt-auto">
+<div class="w-12 h-12 bg-[#2A9D8F]/20 rounded-full flex items-center justify-center text-[#2A9D8F] font-bold">A</div>
+<div>
+<h4 class="font-semibold text-[#1e3a3a]">Arunkumar Singh</h4>
+<p class="text-sm text-gray-500">Verified Patient</p>
+</div>
+</div>
+
+</div>
+
+
+<!-- CARD 5 -->
+<div data-aos="fade-up" data-aos-delay="100"
+class="group bg-[#F8FAFC] p-8 rounded-3xl shadow-lg border border-gray-100 flex flex-col h-full transition-all duration-500 hover:-translate-y-3 hover:shadow-2xl">
+
+<div class="flex items-center gap-1 text-yellow-400 mb-4">
+<i class="ri-star-fill"></i><i class="ri-star-fill"></i><i class="ri-star-fill"></i><i class="ri-star-fill"></i><i class="ri-star-fill"></i>
+<span class="text-gray-500 text-sm ml-2">5.0</span>
+</div>
+
+<p class="text-[#1e3a3a] text-sm md:text-base leading-relaxed mb-6">
+“Dr. Sabnis is very professional and caring. She patiently listens to the problem, explains the treatment clearly, and provides excellent medical guidance.”
+</p>
+
+<div class="flex items-center gap-4 mt-auto">
+<div class="w-12 h-12 bg-[#2A9D8F]/20 rounded-full flex items-center justify-center text-[#2A9D8F] font-bold">S</div>
+<div>
+<h4 class="font-semibold text-[#1e3a3a]">Sneha</h4>
+<p class="text-sm text-gray-500">Patient</p>
+</div>
+</div>
+
+</div>
+
+
+<!-- CARD 6 -->
+<div data-aos="fade-up" data-aos-delay="200"
+class="group bg-[#F8FAFC] p-8 rounded-3xl shadow-lg border border-gray-100 flex flex-col h-full transition-all duration-500 hover:-translate-y-3 hover:shadow-2xl">
+
+<div class="flex items-center gap-1 text-yellow-400 mb-4">
+<i class="ri-star-fill"></i><i class="ri-star-fill"></i><i class="ri-star-fill"></i><i class="ri-star-fill"></i><i class="ri-star-fill"></i>
+<span class="text-gray-500 text-sm ml-2">5.0</span>
+</div>
+
+<p class="text-[#1e3a3a] text-sm md:text-base leading-relaxed mb-6">
+“Dr. Sabnis is very experienced and attentive to patient concerns. She explains treatment options clearly and makes patients feel comfortable during consultations.”
+</p>
+
+<div class="flex items-center gap-4 mt-auto">
+<div class="w-12 h-12 bg-[#2A9D8F]/20 rounded-full flex items-center justify-center text-[#2A9D8F] font-bold">P</div>
+<div>
+<h4 class="font-semibold text-[#1e3a3a]">Prithviraj Singh Bundela</h4>
+<p class="text-sm text-gray-500">Verified Patient</p>
+</div>
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
 
     <!-- FAQ Section -->
     <section id="faq" class="py-20 bg-gray-50">
@@ -698,78 +724,89 @@ Practicing at Sneh Nursing Home and affiliated with Lilavati & Nanavati Max, she
     <!-- Contact Section -->
     <section id="contact" class="py-20 bg-gray-50">
 
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
 
-            <!-- Heading -->
-            <div class="text-center mb-16" data-aos="fade-up">
+<!-- Heading -->
+<div class="text-center mb-16" data-aos="fade-up">
 
-                <h2 class="text-3xl md:text-4xl font-bold text-gray-800 mb-4">
-                    Get In Touch
-                </h2>
+<h2 class="text-3xl md:text-4xl font-bold text-gray-800 mb-4">
+Contact Our Clinic
+</h2>
 
-                <p class="text-lg text-gray-600 max-w-3xl mx-auto">
-                    Feel free to reach out to us for any inquiries or assistance.
-                    We are happy to help with your questions and look forward to connecting with you!
-                </p>
+<p class="text-lg text-gray-600 max-w-3xl mx-auto">
+If you have any questions regarding consultation, treatment, or appointments, 
+our team is here to assist you. Feel free to reach out through the details below 
+and we will be happy to help you.
+</p>
 
-            </div>
+</div>
 
-            <!-- Contact Cards -->
-            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+<!-- Contact Cards -->
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
 
-                <!-- Address -->
-                <div class="bg-white border rounded-xl p-8 text-center shadow-sm hover:shadow-lg hover:-translate-y-2 transition duration-300"
-                    data-aos="fade-up">
+<!-- Address -->
+<div class="bg-white border rounded-xl p-8 text-center shadow-sm hover:shadow-lg hover:-translate-y-2 transition duration-300"
+data-aos="fade-up">
 
-                    <i class="fas fa-map-marker-alt text-5xl text-teal-600 mb-6"></i>
+<i class="fas fa-map-marker-alt text-5xl text-teal-600 mb-6"></i>
 
-                    <h3 class="text-xl font-semibold text-gray-800 mb-2">
-                        Address
-                    </h3>
+<h3 class="text-xl font-semibold text-gray-800 mb-2">
+Clinic Location
+</h3>
 
-                    <p class="text-gray-600">
-                        Mumbai Maharashtra
-                    </p>
+<p class="text-gray-600">
+Mumbai, Maharashtra, India
+</p>
 
-                </div>
+</div>
 
-                <!-- Phone -->
-                <div class="bg-white border rounded-xl p-8 text-center shadow-sm hover:shadow-lg hover:-translate-y-2 transition duration-300"
-                    data-aos="fade-up" data-aos-delay="100">
 
-                    <i class="fas fa-phone-alt text-5xl text-teal-600 mb-6"></i>
+<!-- Phone -->
+<div class="bg-white border rounded-xl p-8 text-center shadow-sm hover:shadow-lg hover:-translate-y-2 transition duration-300"
+data-aos="fade-up" data-aos-delay="100">
 
-                    <h3 class="text-xl font-semibold text-gray-800 mb-2">
-                        Phone
-                    </h3>
+<i class="fas fa-phone-alt text-5xl text-teal-600 mb-6"></i>
 
-                    <a href="tel:919821234075" class="text-teal-600 hover:underline">
-                        919821234075
-                    </a>
+<h3 class="text-xl font-semibold text-gray-800 mb-2">
+Call For Appointment
+</h3>
 
-                </div>
+<a href="tel:+919821234075" class="text-teal-600 hover:underline font-medium">
++91 98212 34075
+</a>
 
-                <!-- Email -->
-                <div class="bg-white border rounded-xl p-8 text-center shadow-sm hover:shadow-lg hover:-translate-y-2 transition duration-300"
-                    data-aos="fade-up" data-aos-delay="200">
+<p class="text-gray-500 text-sm mt-2">
+Available during clinic hours
+</p>
 
-                    <i class="fas fa-envelope text-5xl text-teal-600 mb-6"></i>
+</div>
 
-                    <h3 class="text-xl font-semibold text-gray-800 mb-2">
-                        Email
-                    </h3>
 
-                    <a href="mailto:drshailakasabnis@yahoo.co.in" class="text-teal-600 hover:underline">
-                        drshailakasabnis@yahoo.co.in
-                    </a>
+<!-- Email -->
+<div class="bg-white border rounded-xl p-8 text-center shadow-sm hover:shadow-lg hover:-translate-y-2 transition duration-300"
+data-aos="fade-up" data-aos-delay="200">
 
-                </div>
+<i class="fas fa-envelope text-5xl text-teal-600 mb-6"></i>
 
-            </div>
+<h3 class="text-xl font-semibold text-gray-800 mb-2">
+Email Us
+</h3>
 
-        </div>
+<a href="mailto:drshailakasabnis@yahoo.co.in" class="text-teal-600 hover:underline font-medium">
+drshailakasabnis@yahoo.co.in
+</a>
 
-    </section>
+<p class="text-gray-500 text-sm mt-2">
+Send us your queries anytime
+</p>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
     <!-- Google Map -->
     <div class="mt-16 px-4" data-aos="zoom-in" data-aos-duration="1000">
 
@@ -803,7 +840,7 @@ Practicing at Sneh Nursing Home and affiliated with Lilavati & Nanavati Max, she
 
             <div class="flex flex-col items-center mb-6">
 
-                <img src="./images/cliniclogoo.png" class="w-30 h-20 rounded-lg object-cover mb-4 shadow-lg">
+                <img src="./images/cliniclogoo.jpg" class="w-30 h-20 rounded-lg object-cover mb-4 shadow-lg">
 
                 <h2 class="text-2xl md:text-3xl font-semibold">
                     Dr. Shailaja Sabnis
@@ -972,6 +1009,8 @@ Practicing at Sneh Nursing Home and affiliated with Lilavati & Nanavati Max, she
             this.reset();
         });
     </script>
+
+
 </body>
 
 </html>
