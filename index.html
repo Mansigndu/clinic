@@ -18,11 +18,16 @@
     <style>
         * {
             font-family: 'Inter', sans-serif;
+            /* overflow-x: hidden; */
         }
 
         html {
             scroll-behavior: smooth;
         }
+        html, body {
+    overflow-x: hidden; /* Hide horizontal scroll */
+    width: 100%;
+}
 
         /* Custom animations */
         @keyframes float {
@@ -73,7 +78,7 @@
                 <!-- Logo -->
                 <div class="flex items-center space-x-3">
                     <a href="#home">
-                        <img src="images/cliniclogoo.png" alt="Dr. Shailaja Sabnis" class="h-20 w-auto">
+                        <img src="images/cliniclogoo.png" alt="Dr. Shailaja Sabnis" class="h-10 lg:h-20 w-auto">
                     </a>
                 </div>
 
@@ -89,7 +94,7 @@
                 </div>
 
                 <!-- Mobile Menu Button -->
-                <div class="  md:hidden flex justify-evenly w-[35%] ">
+                <div class="  md:hidden flex justify-evenly w-[20%] ">
                     <button id="mobile-menu-btn" class="text-white hover:text-teal-200 focus:outline-none">
                         <i class="fas fa-bars text-3xl"></i>
                     </button>
